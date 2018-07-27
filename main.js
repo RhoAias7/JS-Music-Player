@@ -13,6 +13,8 @@ function playSong() {
     song.src = songs[currentSong]; //will choose a random song from the array
     songTitle.textContent = songs[currentSong]; //will set song title from the file name
     song.play(); //play the song of course
+    $("#image img").attr("src", albumCovers[currentSong]);
+    $("#bg img").attr("src", albumCovers[currentSong]);
 }
 
 function playOrPause() {
