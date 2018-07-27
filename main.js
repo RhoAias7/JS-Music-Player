@@ -11,7 +11,7 @@ window.onload = playSong; //calls the play song method whenthe window loads in
 
 function playSong() {
     song.src = songs[currentSong]; //will choose a random song from the array
-    songTitle.textContent = songs[currentSong]; //will set song title from the file name
+    songTitle.textContent = songs[currentSong].replace(".mp3", ""); //will set song title from the file name
     song.play(); //play the song of course
     $("#image img").attr("src", albumCovers[currentSong]);
     $("#bg img").attr("src", albumCovers[currentSong]);
@@ -32,9 +32,9 @@ song.addEventListener('timeupdate', function () { //will figure out the current 
     fillBar.style.width = currentPos * 100 + '%';
 });
 
-function next(){ //next song
+function next() { //next song
     currentSong++;
-    if(currentSong > 2){
+    if (currentSong > 2) {
         currentSong = 0;
     }
     playSong();
@@ -43,9 +43,9 @@ function next(){ //next song
     $("#bg img").attr("src", albumCovers[currentSong]);
 }
 
-function prev(){ //previous song
+function prev() { //previous song
     currentSong--;
-    if(currentSong < 0){
+    if (currentSong < 0) {
         currentSong = 2;
     }
     playSong();

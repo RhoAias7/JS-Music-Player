@@ -5,6 +5,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Music Player</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,15 +14,14 @@
 
 <body>
     <div id="bg">
-        <div id="blackLayer"></div>
         <img src="ship.jpg" alt="Background Img" />
     </div>
     <div id="main">
         <div id="image">
-            <img src="ship.jpg" alt="another Img" />
+            <img src="img1.jpg" alt="another Img" />
+            <div colorify id="songTitle"></div>
         </div>
         <div id="player">
-            <div id="songTitle"></div>
             <div id="buttons">
                 <button id="backwards" onclick="prev()">
                     <img src="back.png" height="90%" width="90%" />
@@ -41,5 +41,4 @@
     </div>
 </body>
 <script src="main.js"></script>
-
 </html>
